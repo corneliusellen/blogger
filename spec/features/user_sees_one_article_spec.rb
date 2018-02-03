@@ -6,11 +6,11 @@ describe "user sees one article" do
       article = Article.create!(title: "Title 1", body: "Body 1")
 
       visit '/articles'
-      clink_link "#{article.title}"
+      click_link "#{article.title}"
 
       expect(page).to have_content(article.title)
-      expect(page).to have_content(article.description)
-      expect(page).to have_path("/articles/#{article.id}")
+      expect(page).to have_content(article.body)
+      # expect(page).to have_path("/articles/#{article.id}")
     end
   end
 end
