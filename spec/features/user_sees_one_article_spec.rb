@@ -10,7 +10,7 @@ describe "user sees one article" do
 
       expect(page).to have_content(article.title)
       expect(page).to have_content(article.body)
-      # expect(page).to have_path("/articles/#{article.id}")
+      expect(current_path).to eq("/articles/#{article.id}")
     end
   end
 end
