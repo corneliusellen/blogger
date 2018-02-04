@@ -13,7 +13,7 @@ describe "user edits article" do
         expect(current_path).to eq(edit_article_path(article))
 
         fill_in("article[body]", with: new_body)
-        click_on "Edit Article"
+        click_on "Update Article"
 
         expect(current_path).to eq(article_path(article))
         expect(page).to have_content(new_body)
