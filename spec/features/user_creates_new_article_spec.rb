@@ -18,6 +18,7 @@ describe "user creates new article" do
 
         expect(page).to have_content(title)
         expect(page).to have_content(description)
+        expect(page).to have_content("Article Teach Your Cat to Dance was created.")
         # expect(current_path).to eq('/articles/1')
       end
     end
