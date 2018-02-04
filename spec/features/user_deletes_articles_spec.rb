@@ -11,10 +11,10 @@ describe "user deletes article" do
         click_link "Delete"
 
         expect(current_path).to eq(articles_path)
-        expect(page).to_not have_content(article_1.title)
         expect(page).to_not have_content(article_1.body)
         expect(page).to have_content(article_2.title)
         expect(page).to have_content(article_2.body)
+        expect(page).to have_content("Article Title_1 was deleted.")
       end
     end
   end

@@ -17,6 +17,7 @@ describe "user edits article" do
 
         expect(current_path).to eq(article_path(article))
         expect(page).to have_content(new_body)
+        expect(page).to have_content("Article Take Bird in hands and do the samba was updated.")
       end
     end
   end
