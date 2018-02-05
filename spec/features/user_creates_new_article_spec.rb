@@ -15,7 +15,7 @@ describe "user creates new article" do
         fill_in("article[title]", with: title)
         fill_in("article[body]", with: description)
         click_on "Create Article"
-
+        
         expect(page).to have_content(title)
         expect(page).to have_content(description)
         expect(page).to have_content("Article Teach Your Cat to Dance was created.")
